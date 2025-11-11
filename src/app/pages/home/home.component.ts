@@ -62,31 +62,30 @@ import { RouterLink } from '@angular/router';
           <li>Balancing Customer Expectations: The Truths Unveiled – English</li>
         </ul>
         <p>
-          <strong>Order your copy on Amazon:</strong>
-          <a
-            href="https://www.amazon.ca/s?k=jagadeesan+subramanian+book&crid=HSHTUK4EVS6B&sprefix=jagadeesan+subramanian%2Caps%2C127&ref=nb_sb_ss_saint-en-refocus-candidate_2_22"
-            target="_blank"
-            rel="noopener"
-            >Order Now</a
-          >
-        </p>
-        <p class="external-link">
-          <a
-            href="https://www.amazon.ca/s?k=jagadeesan+subramanian+book&crid=HSHTUK4EVS6B&sprefix=jagadeesan+subramanian%2Caps%2C127&ref=nb_sb_ss_saint-en-refocus-candidate_2_22"
-            target="_blank"
-            rel="noopener"
-            >https://www.amazon.ca/s?k=jagadeesan+subramanian+book&amp;crid=HSHTUK4EVS6B&amp;sprefix=jagadeesan+subramanian%2Caps%2C127&amp;ref=nb_sb_ss_saint-en-refocus-candidate_2_22</a
-          >
+          <strong>Order your copy on Amazon:</strong> Explore these inspiring titles and keep ancient wisdom at your fingertips.
         </p>
         <p>
-          <strong>Devotional Songs &amp; Mantras:</strong> Explore Dr. YesJ’s spiritual compositions, including devotional songs and
-          mantras, on his YouTube channel @BrahmaFuturist for inspiration, guidance, and connection to the divine.
+          <strong>Devotional Songs &amp; Mantras:</strong> Experience Dr. YesJ’s spiritual compositions on his @BrahmaFuturist YouTube
+          channel for inspiration, guidance, and connection to the divine.
         </p>
-        <p class="external-link">
-          <a href="https://www.youtube.com/@BrahmaFuturist" target="_blank" rel="noopener"
-            >https://www.youtube.com/@BrahmaFuturist</a
+        <div class="section-actions">
+          <a
+            class="btn primary"
+            href="https://www.amazon.ca/s?k=jagadeesan+subramanian+book&crid=HSHTUK4EVS6B&sprefix=jagadeesan+subramanian%2Caps%2C127&ref=nb_sb_ss_saint-en-refocus-candidate_2_22"
+            target="_blank"
+            rel="noopener"
+            aria-label="Order Dr. YesJ's books on Amazon (opens in a new tab)"
+            >Order on Amazon</a
           >
-        </p>
+          <a
+            class="btn outline"
+            href="https://www.youtube.com/@BrahmaFuturist"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit the Brahma Futuristic YouTube channel (opens in a new tab)"
+            >Visit YouTube Channel</a
+          >
+        </div>
         <p class="tagline">Prediction, Prevention and Prosper</p>
       </div>
     </section>
