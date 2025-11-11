@@ -173,6 +173,13 @@ p {
 
 .section-actions {
   margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.section-actions .btn {
+  flex-shrink: 0;
 }
 
 .btn {
