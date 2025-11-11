@@ -78,6 +78,10 @@ a {
   color: #ffffff;
 }
 
+.nav-link.active {
+  color: #ffffff;
+}
+
 .nav-link.highlight {
   padding: 0.55rem 1.3rem;
   border-radius: 999px;
@@ -601,6 +605,10 @@ textarea {
 }
 
 .footer-nav a:hover {
+  color: #ffffff;
+}
+
+.footer-nav a.active {
   color: #ffffff;
 }
 

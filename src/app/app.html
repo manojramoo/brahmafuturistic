@@ -2,17 +2,19 @@
   <div class="cosmic-overlay"></div>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" (click)="closeMenu()">Astral Vedang</a>
+      <a class="brand" routerLink="/" (click)="closeMenu()">Astral Vedang</a>
       <nav class="nav-links" [class.open]="isMenuOpen()">
         <a
           *ngFor="let link of navLinks"
           class="nav-link"
-          [href]="link.href"
+          [routerLink]="link.path"
+          routerLinkActive="active"
           (click)="closeMenu()"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
         >
           {{ link.label }}
         </a>
-        <a class="nav-link highlight" href="#contact" (click)="closeMenu()">
+        <a class="nav-link highlight" routerLink="/contact" (click)="closeMenu()">
           Book consultation
         </a>
       </nav>
@@ -25,211 +27,24 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Vedic Astrology for Visionaries</p>
-          <h1>Awaken your cosmic intelligence and lead with inner certainty.</h1>
-          <p class="lead">
-            Astral Vedang blends timeless Jyotish lineage, sacred rituals, and mindful futurism to guide seekers, creators, and
-            conscious organisations toward purpose-aligned expansion.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact">Book a consultation</a>
-            <a class="btn ghost" href="#services">Explore services</a>
-          </div>
-          <div class="trust-points">
-            <div>
-              <strong>12+ yrs</strong>
-              <span>lineage-rooted practice</span>
-            </div>
-            <div>
-              <strong>500+</strong>
-              <span>transformational sessions</span>
-            </div>
-            <div>
-              <strong>30 day</strong>
-              <span>integration support</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="orbit"></div>
-          <div class="crystal"></div>
-          <div class="halo halo-one"></div>
-          <div class="halo halo-two"></div>
-          <div class="sigil">ॐ</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="container">
-        <p class="eyebrow">Offerings</p>
-        <h2>Every interaction is a ritual in motion.</h2>
-        <p class="section-lead">
-          Crafted for founders, creatives, seekers, and families aligning to higher purpose through the wisdom of the stars.
-        </p>
-        <div class="service-grid">
-          <article class="service-card" *ngFor="let service of services">
-            <div class="icon">{{ service.icon }}</div>
-            <h3>{{ service.title }}</h3>
-            <p class="subtitle">{{ service.subtitle }}</p>
-            <p>{{ service.description }}</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="highlights" id="approach">
-      <div class="container highlights-grid">
-        <div class="intro">
-          <p class="eyebrow">Why seekers choose us</p>
-          <h2>Ancient resonance, modern relevance.</h2>
-          <p>
-            Sessions are immersive, meditative, and lucid. Expect grounded counsel, cosmic timing, and a personalised map of
-            remedies attuned to your field.
-          </p>
-          <a class="btn ghost" href="#founder">Meet the founder</a>
-        </div>
-        <div class="highlight-cards">
-          <article class="highlight-card" *ngFor="let highlight of highlights">
-            <h3>{{ highlight.title }}</h3>
-            <p>{{ highlight.description }}</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="founder" id="founder">
-      <div class="container founder-grid">
-        <div class="founder-visual">
-          <div class="portrait-glow"></div>
-          <div class="portrait"></div>
-        </div>
-        <div class="founder-copy">
-          <p class="eyebrow">Meet the guide</p>
-          <h2>Vedica Anand, Astro Guide & Futurist</h2>
-          <p>
-            Initiated into the Himalayan Jyotish lineage, Vedica weaves Sanskrit mantra, sound therapy, and innovation strategy.
-            Her consultations are spacious, poetic, and deeply practical—rooted in dharma, oriented toward the future.
-          </p>
-          <ul>
-            <li>Certified Vedic Astrologer & Vastu consultant</li>
-            <li>Facilitator for meditation, breathwork, and mantra immersion</li>
-            <li>Advisor to conscious brands, founders, and global change-makers</li>
-          </ul>
-          <a class="btn primary" href="#contact">Request a session</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="process" id="approach-detail">
-      <div class="container">
-        <p class="eyebrow">The Astral Vedang approach</p>
-        <h2>Each session is a journey through three portals.</h2>
-        <div class="process-steps">
-          <article class="process-card" *ngFor="let step of process">
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.description }}</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <p class="eyebrow">Client reflections</p>
-        <h2>Whispers from the cosmic circle.</h2>
-        <div class="testimonial-grid">
-          <figure class="testimonial-card" *ngFor="let testimonial of testimonials">
-            <blockquote>“{{ testimonial.quote }}”</blockquote>
-            <figcaption>
-              <span class="name">{{ testimonial.name }}</span>
-              <span class="role">{{ testimonial.role }}</span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="faq" id="faq">
-      <div class="container faq-grid">
-        <div class="faq-intro">
-          <p class="eyebrow">Questions</p>
-          <h2>Your curiosity is sacred.</h2>
-          <p>
-            We honour inquiry. Explore the essentials below and reach out for tailored guidance on collaborations, festivals, or
-            retreats.
-          </p>
-        </div>
-        <div class="faq-items">
-          <details *ngFor="let item of faqs" open>
-            <summary>{{ item.question }}</summary>
-            <p>{{ item.answer }}</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow">Book your session</p>
-          <h2>Ready to converse with the cosmos?</h2>
-          <p>
-            Share your intentions and we’ll create a consultation container that honours your rhythm. Sessions are hosted online
-            and in select cities across India.
-          </p>
-          <div class="contact-methods">
-            <a *ngFor="let method of contactMethods" class="contact-method" [href]="method.href">
-              <span class="label">{{ method.label }}</span>
-              <span class="detail">{{ method.detail }}</span>
-            </a>
-          </div>
-        </div>
-        <form class="contact-form">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" type="text" name="name" placeholder="Your full name" />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="you@example.com" />
-          </div>
-          <div class="field">
-            <label for="focus">Intentions</label>
-            <select id="focus" name="focus">
-              <option value="">Select an area of focus</option>
-              <option>Life direction reading</option>
-              <option>Business alignment</option>
-              <option>Relationship guidance</option>
-              <option>Vastu consultation</option>
-              <option>Event muhurta</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Share your story or questions"></textarea>
-          </div>
-          <button class="btn primary" type="submit">Send intention</button>
-          <p class="privacy">
-            By sharing your details you consent to receiving session updates and sacred insights. We respect your privacy and will
-            never spam.
-          </p>
-        </form>
-      </div>
-    </section>
+    <router-outlet></router-outlet>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <a class="brand" href="#home">Astral Vedang</a>
+        <a class="brand" routerLink="/">Astral Vedang</a>
         <p>Guiding conscious beings with Jyotish wisdom, ritual technology, and futurist insight.</p>
       </div>
       <div class="footer-nav">
-        <a *ngFor="let link of navLinks" [href]="link.href">{{ link.label }}</a>
+        <a
+          *ngFor="let link of navLinks"
+          [routerLink]="link.path"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
+        >
+          {{ link.label }}
+        </a>
       </div>
       <p class="copyright">© {{ year }} Astral Vedang. All rights reserved.</p>
     </div>
