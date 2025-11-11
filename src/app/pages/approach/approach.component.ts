@@ -1,88 +1,44 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
-
-interface Highlight {
-  title: string;
-  description: string;
-}
-
-interface ProcessStep {
-  title: string;
-  description: string;
-}
 
 @Component({
   selector: 'app-approach',
   standalone: true,
-  imports: [NgFor],
   template: `
-    <section class="highlights">
-      <div class="container highlights-grid">
-        <div class="intro">
-          <p class="eyebrow">Why seekers choose us</p>
-          <h2>Ancient resonance, modern relevance.</h2>
-          <p>
-            Sessions are immersive, meditative, and lucid. Expect grounded counsel, cosmic timing, and a personalised map of
-            remedies attuned to your field.
-          </p>
-        </div>
-        <div class="highlight-cards">
-          <article class="highlight-card" *ngFor="let highlight of highlights">
-            <h3>{{ highlight.title }}</h3>
-            <p>{{ highlight.description }}</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="process">
-      <div class="container">
-        <p class="eyebrow">The Astral Vedang approach</p>
-        <h2>Each session is a journey through three portals.</h2>
-        <div class="process-steps">
-          <article class="process-card" *ngFor="let step of process">
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.description }}</p>
-          </article>
-        </div>
+    <section class="page-section">
+      <div class="container narrow tiny-text">
+        <h1>Ancient Technology, Applied Insights: The Pathway of Astrology</h1>
+        <p>
+          Astrology is the methodology for understanding our past, present, and future events. It is a Vedic science, rooted in
+          the ancient Gurukul system of education, where knowledge was imparted directly by enlightened masters. In those times,
+          sages predicted the movements of the Grahas (planets) through extraordinary insight, sometimes using the technique of
+          Anima — leaving their physical body to traverse the universe in its smallest form. Through these journeys, they
+          observed how planetary movements influence life on Earth and impact human destiny.
+        </p>
+        <p>
+          The primary Grahas considered in Vedic astrology are Sun, Moon, Mars, Mercury, Jupiter, Venus, and Saturn, along with
+          the shadow grahas Rahu and Ketu. While the universe contains countless celestial bodies, these Grahas have the most
+          significant effect on human life.
+        </p>
+        <p>
+          To understand astrology in a modern context, consider this analogy: when a person wants to reach a destination,
+          traveling by themselves, they may encounter unforeseen obstacles, delays, or detours that extend their journey beyond
+          expectations. Today, a tool like Google Maps can provide the best route, approximate time of arrival, and warnings of
+          potential disruptions, helping travelers reach their destination efficiently.
+        </p>
+        <p>
+          Similarly, ancient technology applied through astrology provides guidance for life. It reveals challenges beforehand,
+          highlights the best path to take, and prepares the seeker to navigate obstacles effectively. By understanding the
+          patterns of the Grahas, individuals can make informed decisions, minimize difficulties, and reach their life goals in a
+          smoother and often more timely manner than they might have otherwise expected.
+        </p>
+        <p>
+          Through this fusion of ancient wisdom and practical application, Dr. YesJ empowers individuals to align with cosmic
+          influences, anticipate challenges, and achieve clarity, peace, and strength in their life journey. This is the essence
+          of his mission: “Ancient Technology, Applied Insights.”
+        </p>
+        <p class="tagline">Prediction, Prevention and Prosper</p>
       </div>
     </section>
   `
 })
-export class ApproachComponent {
-  protected readonly highlights: Highlight[] = [
-    {
-      title: 'Vedic lineage, modern clarity',
-      description:
-        'Rooted in Parashari and Nadi techniques, translated for present-day seekers, founders, and visionaries ready to evolve.'
-    },
-    {
-      title: 'Holistic remedies that resonate',
-      description:
-        'Gemstone prescriptions, mantra sadhana, ritual offerings, and conscious habit design crafted uniquely for your chart.'
-    },
-    {
-      title: 'Sacred technology for the future',
-      description:
-        'We marry spiritual intelligence with mindful futurism, supporting intuitive leadership and soulful innovation.'
-    }
-  ];
-
-  protected readonly process: ProcessStep[] = [
-    {
-      title: '01. Celestial Mapping',
-      description:
-        'Share your birth details and intentions. We align your goals with planetary timelines, clarifying themes and opportunities.'
-    },
-    {
-      title: '02. Guided Immersion',
-      description:
-        'Enter a curated consultation experience blending Vedic astrology, meditation, and energy attunement practices.'
-    },
-    {
-      title: '03. Integration Blueprint',
-      description:
-        'Receive a personalised action map with remedies, rituals, and mindful prompts to anchor transformation in daily life.'
-    }
-  ];
-}
+export class ApproachComponent {}
