@@ -1,33 +1,68 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
-
-interface ContactMethod {
-  label: string;
-  detail: string;
-  href: string;
-}
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [NgFor],
   template: `
-    <section class="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow">Book your session</p>
-          <h2>Ready to converse with the cosmos?</h2>
-          <p>
-            Share your intentions and we’ll create a consultation container that honours your rhythm. Sessions are hosted online
-            and in select cities across India.
-          </p>
-          <div class="contact-methods">
-            <a *ngFor="let method of contactMethods" class="contact-method" [href]="method.href">
-              <span class="label">{{ method.label }}</span>
-              <span class="detail">{{ method.detail }}</span>
-            </a>
-          </div>
-        </div>
+    <section class="page-section">
+      <div class="container narrow tiny-text">
+        <h1>Book An Appointment</h1>
+        <p>Personal / Professional / Prashanna</p>
+
+        <h2>1. Personal</h2>
+        <ul class="simple-list">
+          <li>Life Journey</li>
+          <li>Love &amp; Relationships</li>
+          <li>Health &amp; Happiness</li>
+          <li>Childbirth &amp; Children’s Wellness</li>
+          <li>Legal Matters &amp; Case Warnings</li>
+        </ul>
+
+        <h2>2. Professional</h2>
+        <ul class="simple-list">
+          <li>Career Guidance</li>
+          <li>Job or Business Decisions</li>
+          <li>Growth &amp; Development</li>
+          <li>Financial Wellbeing</li>
+          <li>Critical Situations &amp; Strategic Decisions</li>
+        </ul>
+
+        <h2>3. Vastu / Science of Earth Positioning</h2>
+        <p>
+          Harmonize your living and working environments by aligning them with the sacred science of Vastu to create supportive,
+          balanced spaces.
+        </p>
+
+        <h2>4. Prashanna – One-to-One In-Person Consultation</h2>
+        <ul class="simple-list">
+          <li>Nava Prashanna</li>
+          <li>Color Prashanna</li>
+          <li>Suya Prashanna</li>
+          <li>Choli Prashanna</li>
+          <li>Deva Prashanna</li>
+          <li>Saha Deva Prashanna</li>
+          <li>Numeri Prashanna</li>
+        </ul>
+
+        <h2>Products and Supports</h2>
+        <ul class="simple-list">
+          <li>Gems &amp; Stones</li>
+          <li>Yantras</li>
+          <li>Mantras</li>
+          <li>Graha Rangolis &amp; Other Support Items</li>
+        </ul>
+
+        <p class="tagline">Prediction, Prevention and Prosper</p>
+      </div>
+    </section>
+
+    <section class="page-section soft-bg">
+      <div class="container narrow tiny-text">
+        <h2>Request a Consultation</h2>
+        <p>
+          Share your details below to begin the process. Precise birth information enables Dr. YesJ to craft accurate insights
+          for your journey.
+        </p>
         <form class="contact-form">
           <div class="field">
             <label for="name">Name</label>
@@ -38,46 +73,32 @@ interface ContactMethod {
             <input id="email" type="email" name="email" placeholder="you@example.com" />
           </div>
           <div class="field">
-            <label for="focus">Intentions</label>
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" type="tel" name="phone" placeholder="Include country code" />
+          </div>
+          <div class="field">
+            <label for="focus">Primary Area of Focus</label>
             <select id="focus" name="focus">
               <option value="">Select an area of focus</option>
-              <option>Life direction reading</option>
-              <option>Business alignment</option>
-              <option>Relationship guidance</option>
-              <option>Vastu consultation</option>
-              <option>Event muhurta</option>
+              <option>Personal</option>
+              <option>Professional</option>
+              <option>Vastu</option>
+              <option>Prashanna</option>
+              <option>Products &amp; Supports</option>
             </select>
           </div>
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Share your story or questions"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Share your birth details and questions"></textarea>
           </div>
-          <button class="btn primary" type="submit">Send intention</button>
+          <button class="btn primary" type="submit">Submit Request</button>
           <p class="privacy">
-            By sharing your details you consent to receiving session updates and sacred insights. We respect your privacy and
-            will never spam.
+            All information shared remains confidential. Dr. YesJ will never disclose personal details and may only reference
+            anonymised experiences to illustrate guidance.
           </p>
         </form>
       </div>
     </section>
   `
 })
-export class ContactComponent {
-  protected readonly contactMethods: ContactMethod[] = [
-    {
-      label: 'Email',
-      detail: 'hello@astralvedang.com',
-      href: 'mailto:hello@astralvedang.com'
-    },
-    {
-      label: 'Phone / WhatsApp',
-      detail: '+91 98201 12345',
-      href: 'tel:+919820112345'
-    },
-    {
-      label: 'Instagram',
-      detail: '@astralvedang',
-      href: 'https://instagram.com/astralvedang'
-    }
-  ];
-}
+export class ContactComponent {}

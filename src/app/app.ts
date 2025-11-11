@@ -19,11 +19,11 @@ interface NavLink {
 export class App {
   protected readonly navLinks: NavLink[] = [
     { label: 'Home', path: '/', exact: true },
+    { label: 'About', path: '/founder', exact: false },
+    { label: 'Astrology', path: '/approach', exact: false },
     { label: 'Services', path: '/services', exact: false },
-    { label: 'Approach', path: '/approach', exact: false },
-    { label: 'Founder', path: '/founder', exact: false },
-    { label: 'Testimonials', path: '/testimonials', exact: false },
-    { label: 'Contact', path: '/contact', exact: false }
+    { label: 'Gallery', path: '/gallery', exact: false },
+    { label: 'Testimonials', path: '/testimonials', exact: false }
   ];
 
   protected readonly isMenuOpen = signal(false);
