@@ -1,7 +1,10 @@
 <div class="page">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" routerLink="/" (click)="closeMenu()">Dr. YesJ</a>
+      <a class="brand" routerLink="/" (click)="closeMenu()">
+        <img src="assets/brahma-logo.svg" alt="Brahma Futuristic logo" />
+        <span>Brahma Futuristic</span>
+      </a>
       <nav class="nav-links" [class.open]="isMenuOpen()">
         <a
           *ngFor="let link of navLinks"
@@ -30,8 +33,11 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <a class="brand" routerLink="/">Dr. YesJ</a>
-        <p>Ancient Technology, Applied Insights for clarity, peace, and strength.</p>
+        <a class="brand" routerLink="/">
+          <img src="assets/brahma-logo.svg" alt="Brahma Futuristic logo" />
+          <span>Brahma Futuristic</span>
+        </a>
+        <p>Ancient technology and applied insights for clarity, peace, and strength.</p>
       </div>
       <div class="footer-nav">
         <a
@@ -44,7 +50,7 @@
         </a>
         <a routerLink="/contact">Book Appointment</a>
       </div>
-      <p class="copyright">© {{ year }} Dr. YesJ. All rights reserved.</p>
+      <p class="copyright">© {{ year }} Brahma Futuristic. All rights reserved.</p>
     </div>
   </footer>
 </div>

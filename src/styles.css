@@ -1,8 +1,13 @@
 :root {
   color-scheme: light;
   font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
-  background-color: #f9f7f1;
-  color: #1f2933;
+  --brand-primary: #8c1c24;
+  --brand-primary-dark: #5b1016;
+  --brand-accent: #f77a2f;
+  --brand-cream: #fff6f1;
+  --brand-paper: #fbeae5;
+  background-color: var(--brand-cream);
+  color: #301416;
 }
 
 * {
@@ -13,13 +18,13 @@ body {
   margin: 0;
   font-family: inherit;
   font-size: 0.95rem;
-  background: #fdfbf6;
-  color: #1f2933;
+  background: var(--brand-cream);
+  color: #301416;
 }
 
 body ::selection {
-  background: rgba(67, 56, 202, 0.25);
-  color: #1f2933;
+  background: rgba(247, 122, 47, 0.35);
+  color: #301416;
 }
 
 body,
