@@ -1,6 +1,17 @@
 :root {
   color-scheme: light;
-  font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  --font-family-sans: 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif;
+  --font-family-display: 'Playfair Display', 'Times New Roman', serif;
+  --font-size-body: 1rem;
+  --font-size-body-sm: 0.94rem;
+  --font-size-body-xs: 0.82rem;
+  --font-size-eyebrow: 0.75rem;
+  --font-size-button: 0.78rem;
+  --font-size-display-xl: clamp(2.6rem, 4.8vw, 3.5rem);
+  --font-size-display-lg: clamp(1.95rem, 4vw, 2.7rem);
+  --font-size-heading-md: clamp(1.45rem, 3vw, 2.05rem);
+  --font-size-heading-sm: clamp(1.2rem, 2.6vw, 1.55rem);
+  --line-height-body: 1.75;
   --brand-primary: #8c1c24;
   --brand-primary-dark: #5b1016;
   --brand-accent: #f77a2f;
@@ -16,10 +27,13 @@
 
 body {
   margin: 0;
-  font-family: inherit;
-  font-size: 0.95rem;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   background: var(--brand-cream);
   color: #301416;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body ::selection {
