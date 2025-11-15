@@ -470,6 +470,13 @@ p {
   margin-top: 0.75rem;
 }
 
+.section-eyebrow {
+  font-size: var(--font-size-eyebrow);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(48, 20, 22, 0.6);
+  margin: 0 0 0.5rem;
+}
 .notice {
   position: relative;
   overflow: hidden;
@@ -482,44 +489,6 @@ p {
   background: radial-gradient(circle at top right, rgba(255, 246, 241, 0.25), rgba(255, 246, 241, 0));
   opacity: 0.7;
   pointer-events: none;
-}
-
-.contact-form {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.field label {
-  display: block;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: var(--font-size-eyebrow);
-  margin-bottom: 0.35rem;
-}
-
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  padding: 0.65rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(92, 16, 22, 0.2);
-  background: #ffffff;
-  font-size: var(--font-size-body-sm);
-  font-family: inherit;
-  color: #301416;
-}
-
-.field textarea {
-  resize: vertical;
-}
-
-.privacy {
-  font-size: var(--font-size-body-xs);
-  color: rgba(48, 20, 22, 0.7);
-  margin: 0;
 }
 
 .book-list,
